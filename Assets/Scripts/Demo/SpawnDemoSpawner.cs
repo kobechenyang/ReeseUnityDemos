@@ -77,9 +77,15 @@ namespace Reese.Demo
                         Offset = new float3(0, 1, 0)
                     },
                     new NavNeedsSurface { },
-                    new Translation
+                    new Parent { },
+                    new LocalToParent { },
+                    new LocalToWorld
                     {
-                        Value = new float3(0, 1, 0)
+                        Value = float4x4.TRS(
+                            new float3(0, 101, 0),
+                            quaternion.identity,
+                            1
+                        )
                     }
                 ),
                 enqueueCount

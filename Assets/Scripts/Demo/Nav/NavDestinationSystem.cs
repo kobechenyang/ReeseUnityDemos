@@ -47,7 +47,7 @@ namespace Reese.Demo
                             Destination = NavUtil.GetRandomPointInBounds(
                                 ref random,
                                 renderBoundsFromEntity[surface.Value].Value,
-                                99
+                                20
                             )
                         });
                     }
